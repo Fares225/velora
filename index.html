@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>VELORA | دار أزياء فيلورا للرجل العصري - الفخامة الهادئة</title>
+  <meta name="description"
+    content="فيلورا VELORA - العلامة الرائدة في تصميم الأزياء الرجالية الفاخرة، بدلات كلاسيكية، ملابس كاجوال راقية، وأقمشة إيطالية مصنوعة بحرفية استثنائية." />
+
+  <!-- Favicon -->
+  <link rel="icon"
+    href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>👑</text></svg>">
+
+  <!-- FontAwesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+
+  <!-- ==========================================================================
+       TOP ANNOUNCEMENT BAR
+       ========================================================================== -->
+  <aside class="announcement-bar" aria-label="Announcement">
+    <div class="container announcement-inner">
+      <div class="announcement-ticker">
+        <span class="promo-pill">عرض الافتتاح</span>
+        <span>✨ شحن مجاني لكافة المحافظات للطلبات فوق 2,000 ج.م | كود: <strong>VELORA10</strong> لخصم 10%</span>
+      </div>
+      <div class="announcement-extras">
+        <select class="currency-select" id="currency-selector" aria-label="Currency Selector">
+          <option value="EGP">EGP (ج.م)</option>
+          <option value="SAR">SAR (ر.س)</option>
+          <option value="USD">USD ($)</option>
+        </select>
+        <button class="lang-btn" id="lang-toggle-btn" aria-label="Toggle Language">English</button>
+      </div>
+    </div>
+  </aside>
+
+  <!-- ==========================================================================
+       HEADER / NAVBAR
+       ========================================================================== -->
+  <header class="header-main">
+    <div class="container nav-container">
+
+      <!-- Brand Logo -->
+      <a href="#" class="brand-logo" aria-label="Velora Home">
+        <span class="logo-text">VELORA</span>
+        <span class="logo-tagline">ATELIER & MENSWEAR</span>
+      </a>
+
+      <!-- Navigation Links -->
+      <nav aria-label="Main Navigation">
+        <ul class="nav-menu">
+          <li><a href="#hero" class="nav-link active">الرئيسية</a></li>
+          <li><a href="#categories" class="nav-link">المجموعات</a></li>
+          <li><a href="#catalog" class="nav-link">البدلات والتوكسيدو <span class="badge-new">جديد</span></a></li>
+          <li><a href="#catalog" class="nav-link">الكاجوال الفاخر</a></li>
+          <li><a href="#atelier" class="nav-link">حرفية فيلورا</a></li>
+          <li><a href="#lookbook" class="nav-link">اللوك بوك</a></li>
+        </ul>
+      </nav>
+
+      <!-- Action Buttons -->
+      <div class="nav-actions">
+        <!-- Wishlist Button -->
+        <button class="icon-btn" onclick="openWishlistDrawer()" title="قائمة الأمنيات" aria-label="Wishlist">
+          <i class="fa-regular fa-heart"></i>
+          <span class="badge-count wishlist-count">0</span>
+        </button>
+
+        <!-- Shopping Cart Drawer Button -->
+        <button class="cart-btn-wrapper" onclick="openCartDrawer()" title="حقيبة التسوق" aria-label="Cart">
+          <span class="icon-btn" style="border: none; background: transparent; width: 32px; height: 32px;">
+            <i class="fa-solid fa-bag-shopping"></i>
+            <span class="badge-count cart-count">0</span>
+          </span>
+          <span class="cart-total-preview" id="cart-total-preview">0 ج.م</span>
+        </button>
+      </div>
+
+    </div>
+  </header>
+
+  <main>
+    <!-- ==========================================================================
+         HERO SECTION
+         ========================================================================== -->
+    <section class="hero-section" id="hero">
+      <div class="container hero-grid">
+
+        <!-- Text Content -->
+        <div class="hero-text-col">
+          <div class="hero-badge-tag">
+            <span class="pulse-dot"></span>
+            <span>تشكيلة خريف وشتاء 2026 - الإصدار المحدود</span>
+          </div>
+
+          <h1 class="hero-title">
+            الفخامة الهادئة.. <span>أسلوب حياة</span> لا مجرد مظهر
+          </h1>
+
+          <p class="hero-desc">
+            في دار <strong>فيلورا</strong>، نُعيد صياغة معايير الأناقة الرجالية العصرية. خامات صوفية إيطالية وكشمير
+            منتقاة بعناية وتفصيل يدوي مخصص ليمنحك هيبة الحضور وراحة تدوم.
+          </p>
+
+          <div class="hero-actions">
+            <a href="#catalog" class="btn-primary">
+              <span>تسوق التشكيلة الحصرية</span>
+              <i class="fa-solid fa-arrow-left"></i>
+            </a>
+            <a href="#atelier" class="btn-outline">
+              <i class="fa-solid fa-compass-drafting"></i>
+              <span>اكتشف فلسفة التصنيع</span>
+            </a>
+          </div>
+
+          <div class="hero-stats">
+            <div class="stat-item">
+              <h4>100%</h4>
+              <p>أقمشة صوف إيطالية نقية</p>
+            </div>
+            <div class="stat-item">
+              <h4>+15,000</h4>
+              <p>عميل نخبوي يثق بنا</p>
+            </div>
+            <div class="stat-item">
+              <h4>4.9 ★</h4>
+              <p>تقييم الجودة ورضا العملاء</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Hero Visual Showcase -->
+        <div class="hero-visual">
+          <div class="hero-image-wrapper">
+            <img src="images/hero_banner.jpg" alt="Velora Men's Bespoke Luxury Overcoat" />
+          </div>
+
+          <!-- Floating Info Card -->
+          <div class="hero-card-floating">
+            <div class="floating-icon">
+              <i class="fa-solid fa-award"></i>
+            </div>
+            <div class="floating-text">
+              <h5>معطف روما الإيطالي المزدوج</h5>
+              <p>صوف ميرينو 100% Super 150s</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         TRUST PILLARS BANNER
+         ========================================================================== -->
+    <section class="trust-banner" aria-label="Key Benefits">
+      <div class="container trust-grid">
+        <div class="trust-item">
+          <div class="trust-icon-box">
+            <i class="fa-solid fa-gem"></i>
+          </div>
+          <div class="trust-info">
+            <h4>أقمشة إيطالية مستوردة</h4>
+            <p>أصواف Super 150s وكشمير فائق النقاء</p>
+          </div>
+        </div>
+
+        <div class="trust-item">
+          <div class="trust-icon-box">
+            <i class="fa-solid fa-scissors"></i>
+          </div>
+          <div class="trust-info">
+            <h4>تفصيل يدوي متقن</h4>
+            <p>حياكة إتقان دقيقة تضمن ملاءمة قياسك</p>
+          </div>
+        </div>
+
+        <div class="trust-item">
+          <div class="trust-icon-box">
+            <i class="fa-solid fa-truck-fast"></i>
+          </div>
+          <div class="trust-info">
+            <h4>توصيل سريع وتغليف فاخر</h4>
+            <p>شحن آمن في علب كرتونية فاخرة مخصصة</p>
+          </div>
+        </div>
+
+        <div class="trust-item">
+          <div class="trust-icon-box">
+            <i class="fa-solid fa-rotate-left"></i>
+          </div>
+          <div class="trust-info">
+            <h4>استبدال واسترجاع مجاني</h4>
+            <p>ضمان راحة البال التام خلال 14 يوماً</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         CATEGORIES SHOWCASE
+         ========================================================================== -->
+    <section class="section-padding" id="categories">
+      <div class="container">
+
+        <div class="section-header">
+          <span class="section-subtitle">المجموعات الرئيسية</span>
+          <h2 class="section-title">صُممت لتلائم كل أبعاد يومك</h2>
+          <p class="section-desc">من الاجتماعات الهامة والسهرات الملكية إلى عطلات نهاية الأسبوع الراقية</p>
+        </div>
+
+        <div class="categories-grid">
+
+          <!-- Category 1 -->
+          <div class="category-card" onclick="setCatalogFilter('suits')">
+            <img src="images/tuxedo.jpg" alt="البدلات والتوكسيدو" />
+            <div class="category-overlay">
+              <span class="category-badge-count">12 قطعة مختارة</span>
+              <h3 class="category-name">البدلات والتوكسيدو</h3>
+              <span class="category-link-action">استكشف المجموعة <i class="fa-solid fa-arrow-left"></i></span>
+            </div>
+          </div>
+
+          <!-- Category 2 -->
+          <div class="category-card" onclick="setCatalogFilter('suits')">
+            <img src="images/hero_banner.jpg" alt="المعاطف والشتويات" />
+            <div class="category-overlay">
+              <span class="category-badge-count">8 تصاميم دافئة</span>
+              <h3 class="category-name">المعاطف والشتويات</h3>
+              <span class="category-link-action">استكشف المجموعة <i class="fa-solid fa-arrow-left"></i></span>
+            </div>
+          </div>
+
+          <!-- Category 3 -->
+          <div class="category-card" onclick="setCatalogFilter('casual')">
+            <img src="images/casual_suede.jpg" alt="الكاجوال المعاصر" />
+            <div class="category-overlay">
+              <span class="category-badge-count">16 قطعة معاصرة</span>
+              <h3 class="category-name">الكاجوال المعاصر</h3>
+              <span class="category-link-action">استكشف المجموعة <i class="fa-solid fa-arrow-left"></i></span>
+            </div>
+          </div>
+
+          <!-- Category 4 -->
+          <div class="category-card" onclick="setCatalogFilter('accessories')">
+            <img src="https://images.unsplash.com/photo-1614252235316-8c857d38b5f4?auto=format&fit=crop&w=800&q=80"
+              alt="الأحذية والإكسسوارات" />
+            <div class="category-overlay">
+              <span class="category-badge-count">14 قطعة جلدية</span>
+              <h3 class="category-name">الأحذية والإكسسوارات</h3>
+              <span class="category-link-action">استكشف المجموعة <i class="fa-solid fa-arrow-left"></i></span>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         PRODUCT CATALOG SECTION
+         ========================================================================== -->
+    <section class="section-padding" id="catalog" style="background: #0c0d10;">
+      <div class="container">
+
+        <div class="section-header">
+          <span class="section-subtitle">الكتالوج الحصري</span>
+          <h2 class="section-title">التشكيلة المختارة لعام 2026</h2>
+          <p class="section-desc">قطع نادرة مصممة بدقة فائقة وبأعداد محدودة لضمان تميزك الدائم</p>
+        </div>
+
+        <!-- Filter & Control Bar -->
+        <div class="filter-tabs-wrapper">
+
+          <!-- Category Pills -->
+          <div class="category-filter-pills" role="tablist">
+            <button class="filter-pill active" data-category="all">كافة القطع</button>
+            <button class="filter-pill" data-category="suits">البدلات والتوكسيدو</button>
+            <button class="filter-pill" data-category="casual">الكاجوال الفاخر</button>
+            <button class="filter-pill" data-category="shirts">القمصان والكنزات</button>
+            <button class="filter-pill" data-category="accessories">الأحذية والإكسسوارات</button>
+          </div>
+
+          <!-- Controls: Search, Sort, Size -->
+          <div class="catalog-controls">
+            <div style="position: relative;">
+              <input type="text" id="search-catalog-input" placeholder="ابحث عن قطعة..." class="sort-select"
+                style="padding-left: 2rem; width: 170px;" />
+              <i class="fa-solid fa-magnifying-glass"
+                style="position: absolute; left: 0.8rem; top: 50%; transform: translateY(-50%); font-size: 0.8rem; color: var(--text-muted);"></i>
+            </div>
+
+            <select class="size-select-control" id="size-filter-select" aria-label="Filter by Size">
+              <option value="all">كل المقاسات</option>
+              <option value="48">مقاس 48</option>
+              <option value="50">مقاس 50</option>
+              <option value="52">مقاس 52</option>
+              <option value="54">مقاس 54</option>
+              <option value="M">مقاس M</option>
+              <option value="L">مقاس L</option>
+              <option value="XL">مقاس XL</option>
+            </select>
+
+            <select class="sort-select" id="catalog-sort" aria-label="Sort Catalog">
+              <option value="featured">المميز أولاً</option>
+              <option value="price-low">السعر: من الأقل للأعلى</option>
+              <option value="price-high">السعر: من الأعلى للأقل</option>
+              <option value="rating">الأعلى تقييماً</option>
+            </select>
+          </div>
+
+        </div>
+
+        <!-- Products Grid Container -->
+        <div class="products-grid" id="products-grid">
+          <!-- Dynamically Injected by app.js -->
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         ATELIER CRAFTSMANSHIP & STORY
+         ========================================================================== -->
+    <section class="section-padding atelier-section" id="atelier">
+      <div class="container atelier-grid">
+
+        <div class="atelier-image-frame">
+          <img src="images/atelier_craft.jpg" alt="Velora Sartorial Atelier Craftsmanship" />
+        </div>
+
+        <div class="atelier-content">
+          <span class="section-subtitle">حرفية فيلورا الاستثنائية</span>
+          <h2>أسرار الصنعة الإيطالية.. حيث تلتقي الأصالة بالحداثة</h2>
+          <p style="color: var(--text-secondary); line-height: 1.8;">
+            نحن لا نصنع ملابس عابرة، بل نبني تحفاً ترتديها. في مشاغلنا، يتم قص كل قطعة يدوياً على يد أمهر الخياطين
+            المتمرسين، باستخدام خيوط حريرية متينة وأقمشة معتمدة من كبرى بيوت النسيج في بييلا وإيطاليا.
+          </p>
+
+          <div class="atelier-features">
+            <div class="atelier-feat-item">
+              <div class="feat-icon"><i class="fa-solid fa-fingerprint"></i></div>
+              <h4>قصّات تشريحية مخصصة</h4>
+              <p>تمنحك حرية الحركة التامة مع الحفاظ على وقفة ملكية متناسقة.</p>
+            </div>
+
+            <div class="atelier-feat-item">
+              <div class="feat-icon"><i class="fa-solid fa-feather-pointed"></i></div>
+              <h4>أقمشة خفيفة الوزن فائقة الدفء</h4>
+              <p>أنسجة صوفية مسامية وناعمة تقاوم التجعد وتتنفس بسلاسة.</p>
+            </div>
+
+            <div class="atelier-feat-item">
+              <div class="feat-icon"><i class="fa-solid fa-shield-halved"></i></div>
+              <h4>تشطيب يدوي لأدق التفاصيل</h4>
+              <p>عراوي أزرار محاكة باليد وأزرار من قرون طبيعية مقاومة للكسر.</p>
+            </div>
+
+            <div class="atelier-feat-item">
+              <div class="feat-icon"><i class="fa-solid fa-arrows-to-dot"></i></div>
+              <h4>خدمة استشارة القياس الشخصية</h4>
+              <p>فريق استشاري متاح عبر الهاتف والواتساب لاختيار مقاسك المثالي.</p>
+            </div>
+          </div>
+
+          <button class="btn-primary" onclick="openSizeGuide()">
+            <i class="fa-solid fa-ruler-combined"></i>
+            <span>تصفح دليل القياسات التفاعلي</span>
+          </button>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         LOOKBOOK & EDITORIAL BANNER
+         ========================================================================== -->
+    <section class="section-padding" id="lookbook">
+      <div class="container">
+
+        <div class="lookbook-banner">
+          <img src="images/hero_banner.jpg" alt="Velora Lookbook 2026" />
+          <div class="lookbook-overlay">
+            <span class="section-subtitle" style="color: var(--gold-primary);">لوك بوك الموسم</span>
+            <h3>إطلالة الشتاء الملكية</h3>
+            <p style="color: var(--text-secondary); margin-bottom: 2rem; line-height: 1.8;">
+              توليفة تجمع بين المعطف الإيطالي المزدوج وكنزة الكشمير بياقة مرتفعة، لإطلالة تفرض الاحترام والأناقة في
+              أروقة العمل والمناسبات الراقية.
+            </p>
+            <div>
+              <a href="#catalog" class="btn-primary">
+                <span>تسوق هذه الإطلالة بالكامل</span>
+                <i class="fa-solid fa-arrow-left"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         TESTIMONIALS SECTION
+         ========================================================================== -->
+
+
+
+
+
+    <!-- ==========================================================================
+         VIP CLUB & NEWSLETTER
+         ========================================================================== -->
+    <section class="section-padding">
+      <div class="container">
+
+        <div class="newsletter-card">
+          <div class="newsletter-inner">
+            <span class="section-subtitle">انضم لنخبة فيلورا</span>
+            <h2>احصل على خصم 15% على أول طلب</h2>
+            <p>سجل بريدك الإلكتروني لتصلك دعوات الإصدارات المحدودة قبل طرحها للعامة، وأكواد الخصم الحصرية لأعضاء النادي.
+            </p>
+
+            <form class="newsletter-form" id="newsletter-form">
+              <input type="email" id="newsletter-email" placeholder="أدخل بريدك الإلكتروني هنا..." required
+                class="newsletter-input" />
+              <button type="submit" class="btn-primary">
+                <span>انضم الآن</span>
+              </button>
+            </form>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ==========================================================================
+       FOOTER
+       ========================================================================== -->
+
+  <!-- Toast Container -->
+  <div class="toast-container" id="toast-container"></div>
+
+  <!-- JavaScript -->
+  <script src="app.js"></script>
+  <script>
+    function setCatalogFilter(category) {
+      const pills = document.querySelectorAll('.filter-pill');
+      pills.forEach(p => {
+        if (p.getAttribute('data-category') === category) {
+          p.click();
+        }
+      });
+      const catalogEl = document.getElementById('catalog');
+      if (catalogEl) {
+        catalogEl.scrollIntoView({ behavior: 'smooth' });
+      }
+    }
+  </script>
+</body>
+
+</html>
